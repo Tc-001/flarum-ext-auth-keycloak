@@ -69,7 +69,8 @@ class KeycloakAuthController implements RequestHandlerInterface
                 'clientSecret'          => $this->settings->get('spookygames-auth-keycloak.app_secret'),
                 'redirectUri'           => $redirectUri,
                 'encryptionAlgorithm'   => $this->settings->get('spookygames-auth-keycloak.encryption_algorithm'),
-                'encryptionKey'         => $this->settings->get('spookygames-auth-keycloak.encryption_key')
+                'encryptionKey'         => $this->settings->get('spookygames-auth-keycloak.encryption_key'),
+                'version'               => '20.0.2'
             ]);
 
         $session = $request->getAttribute('session');
